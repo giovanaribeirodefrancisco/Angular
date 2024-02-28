@@ -6,5 +6,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
+  valor: number = 5;
+
+  deletarCiclo: boolean = false;
+
+  mudarValor(){
+    this.valor++;
+  }
+
+  destruirCiclo(){
+    this.deletarCiclo = true;
+  }
+
 }
